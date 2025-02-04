@@ -1,0 +1,15 @@
+-- Create the ContactForm database
+CREATE DATABASE ContactFormAppnjshukla;
+
+-- Use the newly created database
+USE ContactFormApp;
+
+-- Create the Contacts table
+CREATE TABLE Contacts (
+    ContactID INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    Phone NVARCHAR(20) NULL,
+    Message NVARCHAR(MAX) NULL,
+    SubmittedOn DATETIME DEFAULT GETDATE()
+);
